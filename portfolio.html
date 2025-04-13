@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Personal Portfolio</title>
         <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/f0d72db9a3.js" crossorigin="anonymous"></script>
     </head>
     <body>
         <div id="header">
@@ -33,14 +34,106 @@
             <div class="container">
                 <div class="row">
                     <div class="about-col-1">
-                        <img src="images/user.png">
+                        <img src="images/my img.jpg">
                     </div>
                     <div class="about-col-2">
-                        <h1>About Me</h1>
+                        <h1 class="sub-title">About Me</h1>
+                        <p>Hi! My name is Moyosore Alade, and I’m currently a 200-level Computer Science student at Dominican University.
+                            I’m passionate about technology, problem-solving, and building solutions that make life easier. Over the course of my studies, 
+                            I’ve developed a solid foundation in programming. 
+                            I have basic skills in Java and more intermediate experience with Python, HTML, CSS, and JavaScript. 
+                            I enjoy exploring the creative and logical sides of web development and coding in general.
+                            I’m always looking to learn and grow in this field, 
+                            and I’m excited about the journey ahead as I work towards my graduation in 2027. 
+                            Thanks for stopping by!</p>
+<div class="tab-titles">
+    <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+    <p class="tab-links"onclick="opentab('experience')">Experience</p>
+    <p class="tab-links"onclick="opentab('education')">Education</p>
+</div>
+<div class="tab-contents active-tab" id="skills">
+    <ul>
+        <li><span>Java</span><br>Building Andriod apps</li>
+        <li><span>Web Development</span><br>Web App Development</li>
+        <li><span>C#</span><br>Building fun games</li>
+        <li><span>Python</span><br>Developing Web/App interface</li>
+    </ul>
+</div>
+
+<div class="tab-contents" id="experience">
+    <ul>
+        <li><span>N/a</span><br>na</li>
+        <li><span>no</span><br>no</li>
+        <li><span>no</span><br>no</li>
+        <li><span>no</span><br>no</li>
+    </ul>
+</div>
+
+<div class="tab-contents" id="education">
+    <ul>
+        <li><span>2025 - Current</span><br>Computer Science</li>
+        <li><span>2023</span><br>Udemy Python Course</li>
+        <li><span>2021-2022</span><br>Udacity Java programming</li>
+        <li><span>2019</span><br>Unity Game Dev</li>
+    </ul>
+</div>
+
                     </div>
                 </div>
             </div>
         </div>
+<!---------------services---------->
+<div class="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fas fa-code"></i>
+                <h2>Web Design</h2>
+                <p>As a Computer Science student at Dominican University with hands-on experience in HTML, CSS, and JavaScript, I offer web design services that combine clean code with creative design. With an intermediate skill level in front-end technologies, I build user-friendly and responsive websites that are both functional and visually appealing.
+                    Whether you're looking for a simple personal site or a dynamic business landing page, I’m here to bring your ideas to life. I focus on delivering clean layouts, intuitive navigation, and mobile-friendly designs — all tailored to your needs.
+                    Let’s work together to build something great!</p>
+                    <a href="#">Learn more</a>
+            </div>
+            <div>
+            <i class="fas fa-crop-alt"></i>
+                <h2>UI/UX</h2>
+                <p>With a growing passion for creating smooth and user-friendly digital experiences, I offer UI/UX design services focused on clarity, usability, and aesthetic appeal. 
+                    Drawing from my background in Computer Science and practical experience with front-end technologies like HTML, CSS, and JavaScript, I understand the importance of blending design with functionality.
+                   I design intuitive interfaces that not only look good but also guide users naturally through every interaction. My goal is to create designs that feel effortless, whether for websites, apps, or web-based platforms.</p>
+                    <a href="#">Learn more</a>
+            </div>
+            <div>
+                <i class="fab fa-app-store"></i>
+                <h2>App Design</h2>
+                <p>As a 200-level Computer Science student at Dominican University, I'm actively exploring the world of app design, combining my basic Java knowledge with growing experience in Python and front-end development to prototype and design app interfaces.
+                   I focus on designing clean, responsive, and user-centered mobile and web app layouts. My process includes wireframing, layout structuring, and ensuring that user flow is at the heart of every design. 
+                   I aim to create app designs that are both functional and engaging — perfect for startups, student projects, or small business ideas.</p>
+                    <a href="#">Learn more</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+        <script>
+
+           var tablinks = document.getElementsByClassName("tab-links");
+           var tabcontents = document.getElementsByClassName("tab-contents");
+           function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+           }
+        </script>
 
     </body>
 
