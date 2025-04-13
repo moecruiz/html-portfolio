@@ -14,11 +14,11 @@
                 <nav>
                     
                     <ul id="sidemenu">
-                    <li><a href='#'> Home</a><li>
-                    <li><a href='#'> About</a><li>
-                    <li><a href='#'> Services</a><li>
-                    <li><a href='#'> Portfolio</a><li>
-                    <li><a href='#'> Contact</a><li></li>
+                    <li><a href='#header'> Home</a><li>
+                    <li><a href='#about'> About</a><li>
+                    <li><a href='#services'> Services</a><li>
+                    <li><a href='#portfolio'> Portfolio</a><li>
+                    <li><a href='#contact'> Contact</a><li></li>
                     <i class="fas fa-times" onclick="closemenu"></i>
                     </ul>
                     <i class="fas fa-bars" onclick="openmenu"></i>
@@ -84,6 +84,7 @@
             </div>
         </div>
 <!---------------services---------->
+<div id="services">
 <div class="services">
     <div class="container">
         <h1 class="sub-title">My Services</h1>
@@ -114,6 +115,7 @@
             </div>
         </div>
     </div>
+</div>
 </div>
 
 <!------------------------portfolio----------->
@@ -153,6 +155,7 @@
     </div>
 </div>
 <!---------------------conttact-->
+<div id="contact">
 <div class="contact">
     <div class="container">
         <div class="row">
@@ -180,6 +183,7 @@
     <div class="copyright">
         <p>Copyright @ Moyosore, made with Html and Css</p>
     </div>
+</div>
 </div>
 
 
@@ -210,6 +214,17 @@ function closemenu(){
 }
 
         </script>
+        <script>
+            const scriptURL = '<https://script.google.com/macros/s/AKfycbw_jJLzd9G1ok4-ZMpAz7fOVlJ9D-oJGexnRGNTxdFYhNeMPEQU5NFzvbGSi4mbtUphfA/exec>'
+            const form = document.forms['submit-to-google-sheet']
+          
+            form.addEventListener('submit', e => {
+              e.preventDefault()
+              fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+                .then(response => console.log('Success!', response))
+                .catch(error => console.error('Error!', error.message))
+            })
+          </script>
 
     </body>
 
